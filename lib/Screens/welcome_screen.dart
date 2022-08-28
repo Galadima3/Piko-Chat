@@ -7,6 +7,8 @@ class TestX extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepPurple[100],
+
+      //use CircleAvatar Widget for intro image
     );
   }
 }
