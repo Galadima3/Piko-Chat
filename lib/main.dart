@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:piko/Screens/registration_screens/registration_1.dart';
+import 'package:piko/Screens/registration_screens/registration_2.dart';
 
 import 'package:piko/Screens/welcome_screen.dart';
 
@@ -16,11 +18,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
-      home: TestX(),
+      home: Registration2(),
     );
   }
 }
-
