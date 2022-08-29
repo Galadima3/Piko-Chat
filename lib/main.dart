@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:piko/Screens/registration_screens/registration_1.dart';
-import 'package:piko/Screens/registration_screens/registration_2.dart';
+import 'package:piko/Screens/add_contacts_screen.dart';
+import 'package:piko/Screens/registration_screens/registration_3.dart';
 
-import 'package:piko/Screens/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Registration2(),
+      home: AddContactScreen(),
     );
   }
 }

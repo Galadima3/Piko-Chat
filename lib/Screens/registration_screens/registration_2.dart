@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
+
 import 'package:piko/Screens/registration_screens/widgets.dart';
 
 class Registration2 extends StatefulWidget {
@@ -52,25 +53,21 @@ class _Registration2State extends State<Registration2> {
           SizedBox(
             height: 20,
           ),
-          InternationalPhoneNumberInput(
-            onInputChanged: (value) {},
-           
-            cursorColor:  Colors.white,
-            formatInput: false,
-            selectorConfig: SelectorConfig(
-              showFlags: true,
-              selectorType: PhoneInputSelectorType.DROPDOWN
-            ),
-            inputDecoration: InputDecoration(
-              contentPadding: EdgeInsets.only(bottom: 15, left: 0),
-              border: InputBorder.none,
+          IntlPhoneField(
+            decoration: InputDecoration(
+              
               hintText: 'Phone Number',
               hintStyle: TextStyle(
-                color: Colors.white70,
-                fontSize: 20
-
+                color: Colors.white70
+              ),
+              border: OutlineInputBorder(
+                borderSide: BorderSide(),
               ),
             ),
+            initialCountryCode: 'NG',
+            onChanged: (phone) {
+              print(phone.completeNumber);
+            },
           )
         ],
       ),

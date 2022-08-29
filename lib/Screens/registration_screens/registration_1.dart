@@ -13,6 +13,7 @@ class _Registration1State extends State<Registration1> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      //TODO: set entire Scaffold alignment => alignment: Alignment(-0.8, -1),
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,

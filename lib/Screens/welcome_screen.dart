@@ -13,14 +13,17 @@ class WelcomeScreen extends StatelessWidget {
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset('assets/flutter.png'),
-            Text(
-              'Piko - Video Call & Messaging App',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 45,
-                fontWeight: FontWeight.w500,
+            Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Text(
+                'Piko - Video Call & Messaging App',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 45,
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
             SizedBox(
               height: 25,
