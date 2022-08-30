@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:piko/Screens/add_contacts_screen.dart';
+import 'package:piko/Screens/registration_screens/registration_1.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  static const String id = 'welcome_screen';
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
@@ -31,7 +34,9 @@ class WelcomeScreen extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(18),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, Registration1.id);
+                },
                 child: const Text(
                   'Get Started',
                   style: TextStyle(

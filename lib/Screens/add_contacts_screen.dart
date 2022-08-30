@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AddContactScreen extends StatefulWidget {
+  static const String id = 'add_contact_screen';
   const AddContactScreen({Key? key}) : super(key: key);
 
   @override
@@ -16,10 +17,13 @@ class _AddContactScreenState extends State<AddContactScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.white,
-          size: 35,
+        leading: GestureDetector(
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+            size: 35,
+          ),
+          onTap:() => Navigator.pop(context),
         ),
       ),
       body: Column(
@@ -79,6 +83,7 @@ class _AddContactScreenState extends State<AddContactScreen> {
                 leading: CircleAvatar(
                   backgroundColor: Colors.transparent,
                   child: Image.asset('assets/Man1.jpg'),
+                  
                 ),
                 title: Text('Davell Warner', style: TextStyle(color: Colors.white),),
                 trailing: ElevatedButton(

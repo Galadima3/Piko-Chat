@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FloatingActionB extends StatelessWidget {
-  const FloatingActionB({Key? key}) : super(key: key);
+  final VoidCallback? onPressed;
+  const FloatingActionB({Key? key, this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:piko/Screens/add_contacts_screen.dart';
 
 import 'package:piko/Screens/registration_screens/widgets.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 class Registration3 extends StatefulWidget {
+  static const String id = 'registration_screen3';
   const Registration3({Key? key}) : super(key: key);
 
   @override
@@ -16,14 +18,21 @@ class _Registration3State extends State<Registration3> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF4A3F69),
-      floatingActionButton: FloatingActionB(),
+      floatingActionButton: FloatingActionB(
+        onPressed: () {
+          Navigator.pushNamed(context, AddContactScreen.id);
+        },
+      ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.white,
-          size: 35,
+        leading: GestureDetector(
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+            size: 35,
+          ),
+          onTap:() => Navigator.pop(context),
         ),
       ),
       body: Column(

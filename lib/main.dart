@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:piko/Screens/add_contacts_screen.dart';
+import 'package:piko/Screens/registration_screens/registration_1.dart';
+import 'package:piko/Screens/registration_screens/registration_2.dart';
 import 'package:piko/Screens/registration_screens/registration_3.dart';
-
+import 'package:piko/Screens/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +23,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AddContactScreen(),
+      initialRoute: WelcomeScreen.id,
+      routes: {
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        Registration1.id: (context) => Registration1(),
+        '/third': (context) => Registration2(),
+        Registration3.id: (context) => Registration3(),
+        AddContactScreen.id: (context) => AddContactScreen(),
+      },
+      home: WelcomeScreen(),
     );
   }
 }
