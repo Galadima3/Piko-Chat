@@ -23,13 +23,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      //initialRoute: WelcomeScreen.id,
       initialRoute: WelcomeScreen.id,
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         Registration1.id: (context) => Registration1(),
-        '/third': (context) => Registration2(),
+        Registration2.id: (context) => Registration2(),
         Registration3.id: (context) => Registration3(),
         AddContactScreen.id: (context) => AddContactScreen(),
+        // '/welcome_screen': (context) => WelcomeScreen(),
+        // '/registration_1': (context) => Registration1(),
+        // '/registration_2': (context) => Registration2(),
+        // '/registration_3': (context) => Registration3(),
+        // '/add_contact_screen': (context) => AddContactScreen(),
       },
       home: WelcomeScreen(),
     );

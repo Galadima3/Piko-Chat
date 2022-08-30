@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:piko/Screens/registration_screens/widgets.dart';
 
 class AddContactScreen extends StatefulWidget {
   static const String id = 'add_contact_screen';
@@ -23,7 +24,7 @@ class _AddContactScreenState extends State<AddContactScreen> {
             color: Colors.white,
             size: 35,
           ),
-          onTap:() => Navigator.pop(context),
+          onTap: () => Navigator.pop(context),
         ),
       ),
       body: Column(
@@ -81,19 +82,18 @@ class _AddContactScreenState extends State<AddContactScreen> {
             children: [
               ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: Colors.transparent,
-                  child: Image.asset('assets/Man1.jpg'),
-                  
+                    backgroundImage: AssetImage('assets/bannon.jpg')),
+                title: Text(
+                  'Bannon Xender',
+                  style: TextStyle(color: Colors.white),
                 ),
-                title: Text('Davell Warner', style: TextStyle(color: Colors.white),),
                 trailing: ElevatedButton(
                   onPressed: () {},
-                  child: Text('Add', style: TextStyle(color: Colors.purple),),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white 
+                  child: Text(
+                    'Add',
+                    style: TextStyle(color: Colors.purple),
                   ),
-                  
-              
+                  style: ElevatedButton.styleFrom(primary: Colors.white),
                 ),
               )
             ],

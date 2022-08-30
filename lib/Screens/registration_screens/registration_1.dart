@@ -63,12 +63,11 @@ class _Registration1State extends State<Registration1> {
                   ),
                 ),
               ),
+              
             ],
           ),
           floatingActionButton: FloatingActionB(
-            onPressed: () {
-              Navigator.pushNamed(context, '/third');
-            },
+            onPressed: () => Navigator.pushNamed(context, Registration2.id),
           )),
     );
   }
